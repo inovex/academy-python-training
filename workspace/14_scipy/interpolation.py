@@ -2,9 +2,10 @@
 ## interpolation
 
 ### linear and cubic interpolation
-import numpy as np 
+import numpy as np
 from scipy.interpolate import interp1d
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
+import os
 
 x = np.linspace(0, 10, 20)
 y = np.cos(-x**2 / 9.0)
@@ -18,5 +19,6 @@ y_cubic = cub_interp(xnew)
 
 plt.plot(x, y, 'o', xnew, y_linear, '-', xnew, y_cubic, '--')
 plt.legend(['data', 'linear', 'cubic'], loc='best')
-plt.savefig('./figures/interpolation.png')
+
+plt.savefig('workspace/14_scipy/figures/interpolation.png')
 
