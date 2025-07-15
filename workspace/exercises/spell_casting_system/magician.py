@@ -1,21 +1,10 @@
+# Create a file named magician.py and define a class Magician with the following attributes
+# - name
+# - spells
+# Choose the datatypes yourself! Think about the advantages and disadvantages of the different possibilities.
 
-class Magician:
-    
-    def __init__(self, name: str, spell_list: list[str]):
-        self.name = name
-        self.spell_list = spell_list
-        
-    def cast_spell(self, spell_name: str):
-       if spell_name in self.spell_list:
-           print(f"{self.name} spells {spell_name}")
-       else:
-           print(f"{self.name} cannot cast the {spell_name}")
-           
-    def learn_spell(self, spell_name: str):
-        if not spell_name in self.spell_list:
-            self.spell_list.append(spell_name)
-            return True
-        else:
-            return False
-        
-    
+# Define a function cast_spell in the Magician class that takes spell_name (str) as an argument.
+# If the spell is in the magician’s spell_list, the method should print the spell and the magician’s name. Otherwise, it should print that the magician cannot cast the spell.
+
+# Define a method learn_spell in the Magician class that takes a spell_name (str) as an argument.
+# If the spell is not already in the magician’s spell list, the method should add it to the list and return True. If the spell is already in the magician’s spell list, the method should return False.

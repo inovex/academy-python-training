@@ -6,13 +6,10 @@ class WizardingItem:
         self.stock = stock
 
     def sell(self, mum_items: int):
-        if self.stock - mum_items < 0:
-            raise OutOfStockError
-        
+        # TODO: edit this to raise an exception if not enough items are in stock
+
         self.stock -= mum_items
         return mum_items * self.price
 
 class OutOfStockError(Exception):
     pass
-
-  

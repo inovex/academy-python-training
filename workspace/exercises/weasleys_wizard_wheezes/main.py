@@ -13,20 +13,14 @@ print("\n\n")
 
 ### TODO ###
 # Sell items
-try:
-    cost = inventory.find_item("Weasleys' Wildfire Whiz-bangs").sell(33)
-    cost += inventory.find_item("Loonar Loop Luminators").sell(7)
-    print(f"the total cost of the order is {cost}")
-    
-except OutOfStockError as e:
-    print(e)
-    
-print("\n\n")
-    
+# Use the find_item method twice to sell 33 pieces of Weasleys’ Wildfire Whiz-bangs
+# and 7 pieces of Loonar Loop Luminators.
+# Store the total amount of the items in a variable cost and print the price.
+# To catch OutOfStockErrors, wrap a try … except clause around your function calls.
+
+
 # Generate and print item report
 for item in inventory.item_report():
     print(item)
 
-# Filter items by price
-cheap_items = [ (i.name, i.price) for i in inventory.filter_items(0, 10) ]
-print(cheap_items)
+# TODO: Filter items that cost 10 Galleons max. Use a list comprehension to create a list of tuples [(item.name, item.price),...]. Print the list
